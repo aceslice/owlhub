@@ -1,0 +1,134 @@
+@use "../foundations/colors";
+@mixin flex($align, $justify: center, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+body {
+  @include flex(center, center);
+  height: 100vh;
+}
+.auth-container {
+  background: rgb(28, 28, 28);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  border: 1px solid rgb(40, 40, 40);
+  border-radius: 10px;
+  width: 450px;
+  padding: 40px;
+  h1 {
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  p {
+    color: #888;
+    margin-bottom: 20px;
+  }
+  form {
+    @include flex(left, center, column);
+    margin-bottom: 20px;
+    label {
+      margin-bottom: 8px;
+      color: #fff;
+      font-size: 14px;
+    }
+    input[type="email"],
+    input[type="password"] {
+      margin-bottom: 16px;
+      height: 55px;
+      background: transparent;
+      border: 1.5px solid rgb(40, 40, 40);
+      border-radius: 10px;
+      padding: 0 16px;
+      width: 100%;
+      outline: none;
+      color: #fff;
+      font-size: 15px;
+      &:focus-visible {
+        border-color: #582fff;
+      }
+    }
+  }
+  .actions {
+    @include flex(center, center, column);
+    gap: 16px;
+    margin-bottom: 32px;
+    button {
+      display: block;
+      width: 100%;
+    }
+    .tertiary-button {
+      background: rgb(40, 40, 40);
+    }
+  }
+  fieldset {
+    text-align: center;
+    border: 1.5px solid rgb(40, 40, 40);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+
+    legend {
+      padding: 16px;
+      color: #888;
+    }
+  }
+  .socials {
+    @include flex(center, center);
+    gap: 20px;
+    button {
+      @include flex(center, center);
+      padding: 12px 40px;
+      border-radius: 8px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      border: 2px solid rgb(40, 40, 40);
+      background: rgb(28, 28, 28);
+      img {
+        width: 20px;
+      }
+    }
+  }
+  a {
+    @include colors.primary-color;
+    font-size: 14px;
+  }
+}
+.chips {
+  margin-bottom: 32px;
+  @include flex(left, center);
+  gap: 10px;
+  flex-wrap: wrap;
+  .tile {
+    height: 45px;
+    width: 110px;
+    position: relative;
+    font-weight: 500;
+    @include flex(center, center, center);
+    cursor: pointer;
+    input[type="checkbox"] {
+      appearance: none;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 25px;
+    }
+    input[type="checkbox"]:checked {
+      background-color: rgb(40, 40, 40);
+    }
+    input[type="checkbox"]:checked ~ label {
+      color: #fff;
+    }
+    label {
+      @include flex(center, center);
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+    }
+  }
+}

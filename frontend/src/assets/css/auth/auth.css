@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.auth-container {
+  background: rgb(28, 28, 28);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  border: 1px solid rgb(40, 40, 40);
+  border-radius: 10px;
+  width: 450px;
+  padding: 40px;
+}
+.auth-container h1 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+.auth-container p {
+  color: #888;
+  margin-bottom: 20px;
+}
+.auth-container form {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.auth-container form label {
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+.auth-container form input[type=email],
+.auth-container form input[type=password] {
+  margin-bottom: 16px;
+  height: 55px;
+  background: transparent;
+  border: 1.5px solid rgb(40, 40, 40);
+  border-radius: 10px;
+  padding: 0 16px;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+}
+.auth-container form input[type=email]:focus-visible,
+.auth-container form input[type=password]:focus-visible {
+  border-color: #582fff;
+}
+.auth-container .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.auth-container .actions button {
+  display: block;
+  width: 100%;
+}
+.auth-container .actions .tertiary-button {
+  background: rgb(40, 40, 40);
+}
+.auth-container fieldset {
+  text-align: center;
+  border: 1.5px solid rgb(40, 40, 40);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+.auth-container fieldset legend {
+  padding: 16px;
+  color: #888;
+}
+.auth-container .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.auth-container .socials button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 12px 40px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid rgb(40, 40, 40);
+  background: rgb(28, 28, 28);
+}
+.auth-container .socials button img {
+  width: 20px;
+}
+.auth-container a {
+  color: #582fff;
+  font-size: 14px;
+}
+
+.chips {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.chips .tile {
+  height: 45px;
+  width: 110px;
+  position: relative;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+  cursor: pointer;
+}
+.chips .tile input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.chips .tile input[type=checkbox]:checked {
+  background-color: rgb(40, 40, 40);
+}
+.chips .tile input[type=checkbox]:checked ~ label {
+  color: #fff;
+}
+.chips .tile label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+}/*# sourceMappingURL=auth.css.map */

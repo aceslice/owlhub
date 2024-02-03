@@ -390,6 +390,9 @@ a {
   border-bottom: 2px solid rgb(40, 40, 40);
   z-index: 2;
 }
+.tutor-card .ico {
+  height: 20px;
+}
 .tutor-card .header {
   height: 300px;
   max-height: 60%;
@@ -423,25 +426,35 @@ a {
   color: #888;
   position: relative;
 }
-.tutor-card .details img {
+.tutor-card .details .img {
   background: #582fff;
   padding: 10px;
   border-radius: 100%;
   border: 5px solid rgb(28, 28, 28);
   position: absolute;
-  top: -30px;
+  top: -20px;
   height: 48px;
 }
 .tutor-card .details .expertise {
   margin-top: 16px;
   font-size: 14px;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  flex-direction: row;
+  gap: 4px;
 }
 .tutor-card .details .name {
   font-size: 16px;
   color: #eee;
   margin-bottom: 10px;
   word-break: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  flex-direction: row;
+  gap: 4px;
 }
 .tutor-card .details button {
   width: 100%;

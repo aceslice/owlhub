@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import heart from "../assets/img/heart.svg";
+import brain_icon from "/brain.svg";
+import favorite from "/favorite.svg";
+import verified from "/verified_account.svg";
+import guru from "/guru.svg";
 
 const TutorCard = () => {
   const [users, setUsers] = useState([]);
@@ -21,24 +24,33 @@ const TutorCard = () => {
         <div className="tutor-card" key={index}>
           <div
             className="header"
-            style={{ background: `url(${user.profilePicture})` }}
+            style={{
+              backgroundImage: `url('/img/${user.profilePicture}')`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
           >
-            {" "}
             <div className="overlay">
-              <img src={heart} alt="" className="icon" />
+              <img src={favorite} alt="" className="icon" />
             </div>
           </div>
           <div className="details">
-            <img src={heart} alt="" className="img" />
-            <p className="expertise">Expert in {user.expertise}</p>
-            <p className="name">{user.name}</p>
-            <button
+            <img src={brain_icon} alt="" className="img" />
+            <p className="expertise">
+              <img src={guru} alt={guru} className="ico" />
+              Expert in Coding
+            </p>
+            <p className="name">
+              {user.firstName} {user.middleName} {user.lastName}
+              <img src={verified} alt="" className="ico" />
+            </p>
+            {/* <button
               data-custom=""
               data-user=">"
               className="primary-button icon"
             >
-              Follow @{user.username}
-            </button>
+              Follow {user.firstName}
+            </button> */}
           </div>
         </div>
       ))}

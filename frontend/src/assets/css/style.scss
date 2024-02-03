@@ -241,6 +241,9 @@ a {
   margin-bottom: 32px;
 }
 .tutor-card {
+  .ico {
+    height: 20px;
+  }
   background-color: #7d808429;
   width: 298px;
   position: relative;
@@ -284,25 +287,29 @@ a {
     word-break: break-word;
     color: #888;
     position: relative;
-    img {
+    .img {
       background: #582fff;
       padding: 10px;
       border-radius: 100%;
       border: 5px solid rgb(28, 28, 28);
       position: absolute;
-      top: -30px;
+      top: -20px;
       height: 48px;
     }
     .expertise {
       margin-top: 16px;
       font-size: 14px;
       margin-bottom: 8px;
+      @include flex.flex(center, baseline);
+      gap: 4px;
     }
     .name {
       font-size: 16px;
       color: #eee;
       margin-bottom: 10px;
       word-break: break-word;
+      @include flex.flex(center, baseline);
+      gap: 4px;
     }
     button {
       width: 100%;

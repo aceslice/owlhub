@@ -1,5 +1,4 @@
-import logo from "../assets/img/logo.png";
-
+import logo from "/img/logo.png";
 const Topnav = () => {
   return (
     <div className="topnav">

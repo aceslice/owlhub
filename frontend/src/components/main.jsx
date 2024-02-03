@@ -31,9 +31,7 @@ const Main = () => {
           </a>
         </div>
       </div>
-      <div className="img-container">
-        <TutorCard></TutorCard>
-      </div>
+      <TutorCard></TutorCard>
     </main>
   );
 };

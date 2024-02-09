@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import brain_icon from "/brain.svg";
 import favorite from "/favorite.svg";
 import verified from "/verified_account.svg";
-import guru from "/guru.svg";
+import guru from "/tuition.svg";
 import Avvvatars from "avvvatars-react";
 
 const TutorCard = () => {

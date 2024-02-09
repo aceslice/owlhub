@@ -21,7 +21,7 @@ const Main = () => {
         </h1>
         <p>
           We believe learning is fun and effective with like-minded individuals
-          and familiar experts. Join the peer to peer community for a
+          and familiar experts. Join the peer-to-peer community for a
           personalized experience that's all about you!
         </p>
         <div className="buttons">

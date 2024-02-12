@@ -1,19 +1,28 @@
-import "./assets/css/style.css";
 import LandingPage from "./pages/LandingPage";
-import Authpage from "./pages/Authpage";
 import Topnav from "./components/topnav";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Coursepage from "./pages/CoursePage";
-
+import AuthComponent from "./pages/AuthComponent";
+import LoginComponent from "./pages/LoginComponent";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path: "/courses",
+    element: <Coursepage />,
+  },
+  {
+    path: "/auth",
+    element: <AuthComponent />,
+  },
+  {
+    path: "/login",
+    element: <LoginComponent />,
+  },
+]);
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/auth" element={<Authpage />}></Route>
-        <Route path="/courses" element={<Coursepage />}></Route>
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 export default App;

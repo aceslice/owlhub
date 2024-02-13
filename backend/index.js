@@ -19,3 +19,7 @@ app.get("/api/all", async (req, res) => {
   const data = await userModel.find({});
   res.json(data);
 });
+app.post("/api/login", (req, res) => {
+  const data = req.body;
+  res.json("Login data received");
+});

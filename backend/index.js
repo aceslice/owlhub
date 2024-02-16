@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const userModel = require("./models/userModel");
-import api from "./api";
 require("dotenv").config();
 const app = express();
 app.use(cors());
@@ -15,7 +14,6 @@ mongoose.connect(process.env.DB_CONNECTION_STRING);
 //     });
 //   })
 //   .catch((err) => console.error(err));
-app.use("/api", api);
 app.listen(process.env.PORT, () => {
   console.log("Server is running on port", process.env.PORT);
 });

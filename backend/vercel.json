@@ -1,9 +1,6 @@
 {
   "version": 2,
-  "name": "my-app",
-  "builds": [{ "src": "package.json", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }],
-  "env": {
-    "CUSTOM_ENV_VARIABLE": "my-value"
-  }
+  "name": "Owlhub backend",
+  "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
 }

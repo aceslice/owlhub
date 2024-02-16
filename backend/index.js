@@ -17,6 +17,9 @@ mongoose.connect(process.env.DB_CONNECTION_STRING);
 app.listen(process.env.PORT, () => {
   console.log("Server is running on port", process.env.PORT);
 });
+app.get("/", (req, res) => {
+  res.json({ message: "Working" });
+});
 app.get("/api/all", async (req, res) => {
   const data = await userModel.find({});
   res.json(data);

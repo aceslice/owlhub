@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const userModel = require("./models/userModel");
-import api from "./api";
+import api from "./api/app";
 require("dotenv").config();
 const app = express();
 app.use(cors());

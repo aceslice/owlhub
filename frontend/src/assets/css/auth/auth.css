@@ -51,6 +51,20 @@
 .auth-container form input[type=password]:focus-visible {
   border-color: #582fff;
 }
+.auth-container .custom-select {
+  margin-bottom: 16px;
+  height: 55px;
+  background: transparent;
+  border: 1.5px solid rgb(40, 40, 40);
+  border-radius: 10px;
+  padding: 0 16px;
+  width: 100%;
+  outline: none;
+  color: #fff;
+}
+.auth-container .custom-select option {
+  color: #888;
+}
 .auth-container .actions {
   display: flex;
   align-items: center;
